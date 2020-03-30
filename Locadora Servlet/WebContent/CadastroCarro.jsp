@@ -11,7 +11,7 @@
 
     <title>Cadastro de Carros</title>
   </head>
-  <body>
+  <body style="background-color: #A9A9A9;">
 <form action="CarroInsert" method="post">
  <div class="container">
   <div class="form-group">
@@ -28,11 +28,11 @@
   </div>
   <div class="form-group">
     <label for="preco">Preço</label>
-    <input type="number" name="preco" class="form-control" required="required">
+    <input type="text"  name="preco" class="form-control" required="required">
   </div>      
   <div class="form-group">
     <label for="locacao">Valor locação</label>
-    <input type="number" name="locacao" class="form-control" required="required">
+    <input type="text"  name="locacao" class="form-control" required="required">
   </div>                   
   <button type="submit" class="btn btn-secondary">Cadastrar</button>
   <a href="Index.jsp"> <button type="button" class="btn btn-secondary">Voltar</button></a>  

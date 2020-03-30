@@ -39,8 +39,8 @@ public class CarroInsert extends HttpServlet {
 	   Integer aux;	
 	   Float precof;
 	   Float locacaof;
-	   precof = Float.parseFloat(req.getParameter("preco"));
-	   locacaof = Float.parseFloat(req.getParameter("locacao"));
+	   precof = Float.parseFloat(req.getParameter("preco").replace(",", ""));
+	   locacaof = Float.parseFloat(req.getParameter("locacao").replace(",",""));
 	   Carro c = new Carro();
 	   c.setNome(req.getParameter("nome"));
 	   c.setMarca(req.getParameter("marca"));

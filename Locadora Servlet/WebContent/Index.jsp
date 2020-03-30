@@ -13,7 +13,12 @@
 
     <title>Locadora de veículos</title>
   </head>
-  <body>
+  <body style="background-color: #A9A9A9;">
+	<div class="jumbotron jumbotron-fluid">
+	  <div class="container">
+	    <h1 class="display-4"  style="margin-left: 200px;" >DELPHI >>> JAVA LOCAÇÕES</h1>
+	  </div>
+	</div>  
    <div class="container" style="margin-top: 250px; margin-left: 400px;">
     <a href="CadastroPessoa.jsp"> <button type="button" class="btn btn-secondary">Cadastrar Pessoa</button></a>
     <a href="PessoaMostrar.jsp"> <button type="button" class="btn btn-secondary">Visualizar Pessoas</button></a>
@@ -24,11 +29,6 @@
     <a href="LocacaoMostrar.jsp"> <button type="button" class="btn btn-secondary">Visualizar Locações</button></a>
     <a href="Devolucao.jsp"> <button type="button" class="btn btn-secondary">Devolução</button></a>
     </div>
-
-  
-     
-
-  
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

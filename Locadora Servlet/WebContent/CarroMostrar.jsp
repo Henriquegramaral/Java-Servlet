@@ -15,7 +15,7 @@
 
     <title>Relatório de Carros</title>
   </head>
-  <body>
+  <body style="background-color: #A9A9A9;">
   
   <table class="table table-striped table-dark">
   <thead>

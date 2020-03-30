@@ -11,7 +11,7 @@
 
     <title>Cadastro de Pessoas</title>
   </head>
-  <body>
+  <body style="background-color: #A9A9A9;">
 <form action="PessoaInsert" method="post">
  <div class="container">
   <div class="form-group">

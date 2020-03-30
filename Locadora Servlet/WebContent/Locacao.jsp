@@ -36,7 +36,7 @@
 
     <title>Locação</title>
   </head>
-  <body>
+  <body style="background-color: #A9A9A9;">
 <form action="LocacaoInsert" method="post" style="margin-left: 100px;">
  <divs class="container">
  <div class="form-group">
