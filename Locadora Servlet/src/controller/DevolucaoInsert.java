@@ -75,23 +75,29 @@ public class DevolucaoInsert extends HttpServlet {
 			datainicial.setTime(loc.getDataestimada());
 			Calendar datafinal = new GregorianCalendar();
 			datafinal.setTime(new Date());
+			Calendar datalocacao = new GregorianCalendar();
+			datalocacao.setTime(loc.getData());			
 			long dias = ((datafinal.getTimeInMillis() - datainicial.getTimeInMillis()) / (24*60*60*1000));
-			
+			long diasadiantado = ((datafinal.getTimeInMillis() - datalocacao.getTimeInMillis()) / (24*60*60*1000));
 		   
 		   if(dias > 0)
 		   {
 			 loc.setValormulta(dias * (((vllocacao * 25)/100) + vllocacao));  
 			 loc.setValorpago((dias * (((vllocacao * 25)/100) + vllocacao)) + loc.getValorcobrado());
-		   }else{
-			 loc.setValormulta(Float.parseFloat("0"));
-			 loc.setValorpago(loc.getValorcobrado());
-		   } 
+		   }else if(dias < 0){ 				 
+				loc.setValorcobrado(diasadiantado * vllocacao); 
+			    loc.setValorpago(diasadiantado * vllocacao);
+		   }else {
+			    loc.setValormulta(Float.parseFloat("0"));
+			    loc.setValorpago(loc.getValorcobrado());
+		   }
 		  loc.setFldevolvido(1);
 		  loc.setDatadevolucao((new Date()));
-		  req.setAttribute("aux", "Devolução realizada com sucesso.");
+		  
 	   }
    } 
    
+    req.setAttribute("aux", "Devolução realizada com sucesso.");
    
 	//req.setAttribute(GREETING_REQUEST_PARAMETER_KEY, greeting);
 	req.getRequestDispatcher("Devolucao.jsp").forward(req, resp);
